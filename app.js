@@ -1,5 +1,5 @@
 (()=>{
-    const currentTime=()=>{
+    const getTheTime=()=>{
         let date = new Date();
         let hour = date.getHours();
         let minutes = date.getMinutes();
@@ -14,7 +14,11 @@
         let watch =  document.querySelector('#watch');
         watch.innerHTML = time;
     };
-    setInterval(currentTime,1000);
+    setInterval(getTheTime,1000);
+
+    let today = new Date();
+    let writeToday = document.querySelector('.today');
+    writeToday.innerHTML=today;
 
 })();
 
